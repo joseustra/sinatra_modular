@@ -14,8 +14,6 @@ configure do
   use Rack::Coffee, root: 'public', urls: '/javascripts'
 end
 
-map "/" do
-  run HomeController
-end
-
-run Sinatra::Application
+run Rack::URLMap.new({
+  "/"    => HomeController
+})

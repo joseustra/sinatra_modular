@@ -1,6 +1,8 @@
+ENV["RACK_ENV"] ||= "development"
+
 require 'rubygems'
 require 'bundler'
-Bundler.require(:default)
+Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 require 'sass/plugin/rack'
 require './settings'
 
@@ -13,7 +15,7 @@ configure do
   Sass::Plugin.options[:template_location] = "./assets/sass"
 
   use Sass::Plugin::Rack
-  use Rack::Coffee, root: 'public', urls: '/javascripts'
+  use Rack::Coffee, root: File.dirname(__FILE__), urls: '/assets/javascripts'
 end
 
 run Rack::URLMap.new({

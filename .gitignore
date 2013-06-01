@@ -3,6 +3,7 @@
 .bundle
 .config
 .DS_Store
+public/.DS_Store
 .sass-cache
 coverage
 InstalledFiles

@@ -1,5 +1,4 @@
 class HomeController < Sinatra::Base
-  
   get '/' do
     erb :"home/index"
   end

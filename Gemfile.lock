@@ -17,11 +17,11 @@ GEM
       multi_json (~> 1.0)
     fssm (0.2.10)
     multi_json (1.7.4)
-    rack (1.5.2)
+    rack (1.6.13)
     rack-coffee (1.0.0)
       coffee-script
       rack
-    rack-protection (1.5.0)
+    rack-protection (1.5.5)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
